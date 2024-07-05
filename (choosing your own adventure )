@@ -1,0 +1,57 @@
+'''Project for choosing your own adventure'''
+
+name=input("Enter your name : ").title()
+print("Hi ",name,"Welcome to the adventure")
+answer=input("You are in a dirt road, that comes to an end. what way would you choose (left/right)? : ").lower()
+
+if answer=='left':
+    answer=input(" you turned left and You are infront of a river. There is boat available. will you swim to the otherside or use the boat to pass the river (swim/boat)? : ").lower()
+    if answer=='swim':
+        print("A crocodile attacked you while swimming. You lose...!")
+    elif answer=='boat':
+        answer=input("you crossed the river and came to the mail roar using the boat. now,there is gansters present in front of you. you need to get your weapon to protect yourdelf. what weapon will you choose (knife/gun)? : ").lower()
+        if answer=='knife':
+            print("ganster used guns to kill you. You lose...!")
+        elif answer=='gun':
+            answer=input("while attacking you ran out of bullets to attack, would you risk your life to get bullets from a nearby shop by threatening or attack them with bare hands (get/hands)? : ").lower()
+            if answer=='get':
+                print("police arrested you while threatening. You lose...!")
+            elif answer=='hands':
+                print("gangsters shooted you. You lose...!")
+            else:
+                print("Not a valid choice!. You lose...!")
+        else:
+            print("Not a valid choice!. You lose...!")
+
+    else:
+        print("Not a valid choice!. You lose...!")                
+elif answer=='right':
+    answer=input("You turned right and There is a forest in front of you, would you go in or head back (go in/head back)? : ").lower()
+    if answer=='go in':
+        answer=input("While you are going in there is bear standing before to attack you, to protect yourself from it, would you run for your life or attack it (run/attack)? : ").lower()
+        if answer=='run':
+            print("bear catched you while running, you died. You lose...!")
+        elif answer=='attack':
+            print("bear is stronger than you to attack. you died. You lose...!")
+        else:
+            print("Not a valid choice!. You lose...!")
+    elif answer=='head back':
+        answer=input("you head backed and now you are in front of your city, would you walk through your destination or use a taxi (walk/taxi)? : ").lower()
+        if answer=='walk':
+            print("you died of thirst by walking many miles. You lose...!")
+        elif answer=='taxi':
+            answer=input("You are in last stage of your adventure.\nYou used a taxi to reach your destination. There is a teasure is hidden under the ground. would you dig and find it or return back (dig/return)? : ").lower()
+            if answer=='return':
+                print("you returned with empty hands. You lose....!")
+            elif answer=='dig':
+                print("Congratulations! You found the Gold. You won....!")
+            else:
+                print("Not a valid choice!. You lose...!")
+        else:
+            print("Not a valid choice!. You lose...!")
+    
+    else:
+        print("Not a valid choice!. You lose...!")
+
+else:
+    print("Not a valid choice!. You lose...!")
